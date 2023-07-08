@@ -32,10 +32,10 @@
                         ../claveSeleccionada}}{{../opcion}}{{/ifCond}}></td>
                 <td>
                     {{#if ../estado}}
-                    <a href="/pacientes/eliminar/{{cedula}}">Eliminar</a> <br><br>
-                    <a href="/pacientes/enviar/{{@key}}">Actualizar</a>
+                    <a href="/pacientes/eliminar/{{cedula}}"><i style='font-size:24px' title="Eliminar" class='fas' 'Eliminar'>&#xf12d;</i></a> <br><br>
+                    <a href="/pacientes/enviar/{{@key}}"><i style='font-size:24px'  title="Actualizar"  class='fas' 'Actualizar'>&#xf044;</i></a>
                     {{else}}
-                    <input type="submit" class="enviar" value="Enviar">
+                    <button class="enviar" type="submit" value="enviar"><i class="far fa-paper-plane" title="Enviar" style='font-size:24px'></i></button>
                     {{/if}}
                 </td>
             </form>
@@ -46,9 +46,9 @@
  
 <div>
     {{#if estado}}
-    <a class="volver" href="/">Volver</a>
-    <a href="pacientes/agregar-paciente">Agregar paciente</a>
+    <a class="volver" href="/"><i class='fas fa-sign-out-alt' style='font-size:18px'></i>Volver</a>
+    <a href="pacientes/agregar-paciente"><i class='far fa-folder-open' style='font-size:18px'></i>Agregar Paciente</a>
     {{else}}
-    <a class="volver" href="/pacientes">Volver</a>
+    <a class="volver" href="/pacientes"><i class='fas fa-sign-out-alt' style='font-size:18px'></i>Volver</a>
     {{/if}}
 </div>

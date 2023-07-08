@@ -42,22 +42,22 @@ body {
 
 a,
 input[type="submit"] {
-  color: #fff;
-  text-decoration: none;
-  padding: 8px 12px;
-  border: none;
-  font-size: medium;
-  border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: none;
+    font-size: medium;
+    border-radius: 4px;
 }
 
 a:hover,
 input[type="submit"]:hover {
-  background-color: rgb(116, 116, 116);
+    background-color: rgb(116, 116, 116);
 }
 
 .enviar {
     background-color: rgb(32, 25, 25);
-  }
+}
 
 
 a {
@@ -78,7 +78,7 @@ nav {
     gap: 50px;
     padding: 15px 50px;
     box-shadow: 10px 10px 10px;
-    row-gap: (128, 128, 128, 0.548); 
+    row-gap: (128, 128, 128, 0.548);
     color: white;
 
 }
@@ -87,4 +87,76 @@ nav {
     margin-right: -15px;
     margin-left: -15px;
     margin-top: -15px;
-  }
+}
+
+.Actualizar::after {
+    content: "Actualizar";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 3px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 2s, opacity 2s;
+}
+
+.Actualizar:hover::after {
+    visibility: visible;
+    opacity: 2;
+}
+
+.Eliminar::after {
+    content: "Eliminar";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 3px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 2s, opacity 2s;
+}
+
+.Eliminar:hover::after {
+    visibility: visible;
+    opacity: 2;
+}
+
+.far fa-paper-plane {
+    content: "Enviar";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 3px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 2s, opacity 2s;
+}
+
+.far fa-paper-plane:hover::after {
+    visibility: visible;
+    opacity: 2;
+}
+
+button.enviar {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+button.enviar i {
+    font-size: 24px;
+    color: rgb(125, 125, 129);
+}

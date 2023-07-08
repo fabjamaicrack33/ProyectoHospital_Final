@@ -10,6 +10,7 @@
 body {
   position: relative;
   height: 100vh;
+  background-color:rgba(214, 203, 203, 0.788) ;
 }
 
 h1 {
@@ -140,4 +141,11 @@ li a:hover {
  img {
   width: 6vw;
 
+}
+
+.button, span, visually-hidden {
+    background: rgb(27, 27, 27);
+    border-radius: 50%;
+    box-shadow: 2px 0 8px 8px white;
+    
 }

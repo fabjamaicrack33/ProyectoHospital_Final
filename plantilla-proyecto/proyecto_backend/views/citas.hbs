@@ -28,10 +28,10 @@
                         ../claveSeleccionada}}{{../opcion}}{{/ifCond}}></td>
                 <td>
                     {{#if ../estado}}
-                    <a href="/citas/eliminar/{{id}}">Eliminar</a> <br><br>
-                    <a href="/citas/enviar/{{@key}}">Actualizar</a>
+                    <a href="/citas/eliminar/{{id}}"><i style='font-size:24px' title="Eliminar" class='fas' 'Eliminar'>&#xf12d;</i></a> <br><br>
+                    <a href="/citas/enviar/{{@key}}"><i style='font-size:24px'  title="Actualizar"  class='fas' 'Actualizar'>&#xf044;</i></a>
                     {{else}}
-                    <input type="submit" class="enviar" value="Enviar">
+                    <button class="enviar" type="submit" value="enviar"><i class="far fa-paper-plane" title="Enviar" style='font-size:24px'></i></button>
                     {{/if}}
                 </td>
             </form>
@@ -41,9 +41,9 @@
 </table>
 <div>
     {{#if estado}}
-    <a class="volver" href="/">Volver</a>
-    <a href="/citas/agregar-cita">Nueva cita</a>
+    <a class="volver" href="/"><i class='fas fa-sign-out-alt' style='font-size:18px'></i>Volver</a>
+    <a href="/citas/agregar-cita"><i class='far fa-folder-open' style='font-size:18px'></i>Nueva Cita</a>
     {{else}}
-    <a class="volver" href="/citas">volver</a>
+    <a class="volver" href="/citas"><i class='fas fa-sign-out-alt' style='font-size:18px'></i>Volver</a>
     {{/if}}
 </div>

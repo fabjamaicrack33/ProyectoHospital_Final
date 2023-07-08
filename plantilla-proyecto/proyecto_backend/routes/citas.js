@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
             console.log("Error en la consulta", error)
             res.status(500).send("Error en la consulta")
         } else {
-            res.render('citas', { layout:'main2' ,title: 'citas', citas: results, opcion: 'disabled', estado: true })
+            res.render('citas', { layout:'main2' ,title: 'Citas Medicas', citas: results, opcion: 'disabled', estado: true })
         }   //renderizar 
     });
 });

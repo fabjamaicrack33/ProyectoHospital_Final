@@ -7,13 +7,13 @@
     <table border="1">
         <thead>
             <tr>
-                <th>cedula</th>
-                <th>nombres</th>
-                <th>apellidos</th>
-                <th>especialidad</th>
-                <th>consultorio</th>
-                <th>correo</th>
-                <th>opciones</th>
+                <th>Cedula</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Especialidad</th>
+                <th>Consultorio</th>
+                <th>Correo</th>
+                <th>Opciones</th>
             </tr>
         </thead>
         <tbody>
@@ -33,10 +33,10 @@
                             ../claveSeleccionada}}{{../opcion}}{{/ifCond}}></td>
                     <td>
                         {{#if ../estado}}
-                        <a href="/medicos/eliminar/{{cedula}}">Eliminar</a> <br><br>
-                        <a href="/medicos/enviar/{{@key}}">Actualizar</a>
+                        <a href="/medicos/eliminar/{{cedula}}"><i style='font-size:24px' title="Eliminar" class='fas' 'Eliminar'>&#xf12d;</i></a> <br><br>
+                        <a href="/medicos/enviar/{{@key}}"><i style='font-size:24px'  title="Actualizar"  class='fas' 'Actualizar'>&#xf044;</i></a>
                         {{else}}
-                        <input type="submit" class="enviar" value="Enviar">
+                        <button class="enviar" type="submit" value="enviar"><i class="far fa-paper-plane" title="Enviar" style='font-size:24px'></i></button>
                         {{/if}}
                     </td>
                 </form>
@@ -47,9 +47,9 @@
 
 <div>
     {{#if estado}}
-    <a class="volver" href="/">Volver</a>
-    <a href="medicos/agregar-medico">Agregar medico</a>
+    <a class="volver" href="/"><i class='fas fa-sign-out-alt' style='font-size:18px'></i>Volver</a>
+    <a href="medicos/agregar-medico"><i class='far fa-folder-open' style='font-size:18px'></i>Agregar Medico</a>
     {{else}}
-    <a class="volver" href="/medicos">Volver</a>
+    <a class="volver" href="/medicos"><i class='fas fa-sign-out-alt' style='font-size:18px'></i>Volver</a>
     {{/if}}
 </div>
