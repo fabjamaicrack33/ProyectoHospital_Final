@@ -1,0 +1,90 @@
+table {
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #030000;
+}
+
+th {
+    color: #fff;
+    background-color: #000000;
+}
+
+tr:nth-child(even) {
+    background-color: #000000;
+}
+
+.cuadro {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.filatabla {
+    width: 7vw;
+
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    background-color: rgba(214, 203, 203, 0.788);
+}
+
+a,
+input[type="submit"] {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border: none;
+  font-size: medium;
+  border-radius: 4px;
+}
+
+a:hover,
+input[type="submit"]:hover {
+  background-color: rgb(116, 116, 116);
+}
+
+.enviar {
+    background-color: rgb(32, 25, 25);
+  }
+
+
+a {
+    background-color: rgb(32, 25, 25);
+
+}
+
+img {
+    width: 6vw;
+    vertical-align: middle;
+}
+
+nav {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 15px 50px;
+    box-shadow: 10px 10px 10px;
+    row-gap: (128, 128, 128, 0.548); 
+    color: white;
+
+}
+
+nav {
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: -15px;
+  }

@@ -1,0 +1,54 @@
+
+ <nav>
+<p><img src="/images/simbolo1.webp">CENTRO MEDICO BACK</p> 
+<h3><img src="/images/simbolopaciente.jpg">LISTADO DE PACIENTES</h3>
+</nav>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Nombres</th>
+            <th>Apellidos </th>
+            <th>Cedula</th>
+            <th>Edad</th>
+            <th>Telefono o Celular</th>
+            <th>Opciones</th>
+        </tr>
+    </thead>
+   
+
+    <tbody>
+        {{#each pacientes}}
+        <tr>
+            <form action="/pacientes/actualizar/{{cedula}}" method="post">
+                <td><input type="text" id="nombres" name="nombres" value="{{nombre}}" {{#ifCond @key '!='
+                        ../claveSeleccionada}}{{../opcion}}{{/ifCond}}></td>
+                <td><input type="text" id="apellido" name="apellido" value="{{apellido}}" {{#ifCond @key '!='
+                        ../claveSeleccionada}}{{../opcion}}{{/ifCond}}></td>
+                <td><input type="text" value="{{cedula}}" disabled></td>
+                <td><input type="text" id="edad" name="edad" value="{{edad}}" {{#ifCond @key '!='
+                        ../claveSeleccionada}}{{../opcion}}{{/ifCond}}></td>
+                <td><input type="tel" id="telefono" name="telefono" value="{{telefono}}" {{#ifCond @key '!='
+                        ../claveSeleccionada}}{{../opcion}}{{/ifCond}}></td>
+                <td>
+                    {{#if ../estado}}
+                    <a href="/pacientes/eliminar/{{cedula}}">Eliminar</a> <br><br>
+                    <a href="/pacientes/enviar/{{@key}}">Actualizar</a>
+                    {{else}}
+                    <input type="submit" class="enviar" value="Enviar">
+                    {{/if}}
+                </td>
+            </form>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+ 
+<div>
+    {{#if estado}}
+    <a class="volver" href="/">Volver</a>
+    <a href="pacientes/agregar-paciente">Agregar paciente</a>
+    {{else}}
+    <a class="volver" href="/pacientes">Volver</a>
+    {{/if}}
+</div>
