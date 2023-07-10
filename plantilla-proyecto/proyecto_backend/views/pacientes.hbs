@@ -28,7 +28,7 @@
                 <td><input type="text" value="{{cedula}}" disabled></td>
                 <td><input type="text" id="edad" name="edad" value="{{edad}}" {{#ifCond @key '!='
                         ../claveSeleccionada}}{{../opcion}}{{/ifCond}}></td>
-                <td><input type="tel" id="telefono" name="telefono" value="{{telefono}}" {{#ifCond @key '!='
+                <td><input type="text" id="telefono" name="telefono"  value="{{telefono}}" {{#ifCond @key '!='
                         ../claveSeleccionada}}{{../opcion}}{{/ifCond}}></td>
                 <td>
                     {{#if ../estado}}

@@ -21,9 +21,9 @@
             <tr>
                 <form action="/medicos/actualizar/{{cedula}}" method="post">
                     <td><input class="filatabla" type="text" value="{{cedula}}" disabled></td>
-                    <td><input type="text" id="nombre" name="nombre" value="{{nombre}}" {{#ifCond @key '!='
+                    <td><input type="text" id="nombre" name="nombre" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" value="{{nombre}}" {{#ifCond @key '!='
                             ../claveSeleccionada}}{{../opcion}}{{/ifCond}}></td>
-                    <td><input type="text" id="apellido" name="apellido" value="{{apellido}}" {{#ifCond @key '!='
+                    <td><input type="text" id="apellido" name="apellido" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" value="{{apellido}}" {{#ifCond @key '!='
                             ../claveSeleccionada}}{{../opcion}}{{/ifCond}}></td>
                     <td><input type="text" id="especialidad" name="especialidad" value="{{especialidad}}" {{#ifCond
                             @key '!=' ../claveSeleccionada}}{{../opcion}}{{/ifCond}}></td>
